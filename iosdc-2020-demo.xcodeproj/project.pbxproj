@@ -13,7 +13,6 @@
 		D655299824E92C920027CF5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D655299624E92C920027CF5F /* Main.storyboard */; };
 		D655299A24E92C9F0027CF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D655299924E92C9F0027CF5F /* Assets.xcassets */; };
 		D655299D24E92C9F0027CF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D655299B24E92C9F0027CF5F /* LaunchScreen.storyboard */; };
-		D65529A824E92C9F0027CF5F /* iosdc_2020_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529A724E92C9F0027CF5F /* iosdc_2020_demoTests.swift */; };
 		D65529B324E92C9F0027CF5F /* iosdc_2020_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529B224E92C9F0027CF5F /* iosdc_2020_demoUITests.swift */; };
 		D65529CE24E9324A0027CF5F /* SomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529CD24E9324A0027CF5F /* SomeEntity.swift */; };
 		D65529D024E932A90027CF5F /* SomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529CF24E932A90027CF5F /* SomeType.swift */; };
@@ -26,6 +25,7 @@
 		D65529E024E935A90027CF5F /* SomePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529DF24E935A90027CF5F /* SomePresenterImpl.swift */; };
 		D65529E224E967E00027CF5F /* SomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529E124E967E00027CF5F /* SomeViewController.swift */; };
 		D65529E424E967FB0027CF5F /* SomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65529E324E967FB0027CF5F /* SomeViewController.storyboard */; };
+		D65529E624E96A430027CF5F /* SomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529E524E96A430027CF5F /* SomePresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 		D655299C24E92C9F0027CF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D655299E24E92C9F0027CF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D65529A324E92C9F0027CF5F /* iosdc-2020-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iosdc-2020-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D65529A724E92C9F0027CF5F /* iosdc_2020_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosdc_2020_demoTests.swift; sourceTree = "<group>"; };
 		D65529A924E92C9F0027CF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D65529AE24E92C9F0027CF5F /* iosdc-2020-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iosdc-2020-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65529B224E92C9F0027CF5F /* iosdc_2020_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosdc_2020_demoUITests.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		D65529DF24E935A90027CF5F /* SomePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomePresenterImpl.swift; sourceTree = "<group>"; };
 		D65529E124E967E00027CF5F /* SomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewController.swift; sourceTree = "<group>"; };
 		D65529E324E967FB0027CF5F /* SomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SomeViewController.storyboard; sourceTree = "<group>"; };
+		D65529E524E96A430027CF5F /* SomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomePresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +136,8 @@
 		D65529A624E92C9F0027CF5F /* iosdc-2020-demoTests */ = {
 			isa = PBXGroup;
 			children = (
-				D65529A724E92C9F0027CF5F /* iosdc_2020_demoTests.swift */,
 				D65529A924E92C9F0027CF5F /* Info.plist */,
+				D65529E524E96A430027CF5F /* SomePresenterTests.swift */,
 			);
 			path = "iosdc-2020-demoTests";
 			sourceTree = "<group>";
@@ -433,7 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D65529A824E92C9F0027CF5F /* iosdc_2020_demoTests.swift in Sources */,
+				D65529E624E96A430027CF5F /* SomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
