@@ -100,12 +100,13 @@
 			isa = PBXGroup;
 			children = (
 				D655299024E92C920027CF5F /* AppDelegate.swift */,
-				D655299224E92C920027CF5F /* SceneDelegate.swift */,
-				D655299424E92C920027CF5F /* ViewController.swift */,
-				D655299624E92C920027CF5F /* Main.storyboard */,
 				D655299924E92C9F0027CF5F /* Assets.xcassets */,
-				D655299B24E92C9F0027CF5F /* LaunchScreen.storyboard */,
+				D65529C224E9314D0027CF5F /* Data */,
+				D65529C024E9313D0027CF5F /* Domain */,
 				D655299E24E92C9F0027CF5F /* Info.plist */,
+				D655299B24E92C9F0027CF5F /* LaunchScreen.storyboard */,
+				D65529C124E931450027CF5F /* Presentation */,
+				D655299224E92C920027CF5F /* SceneDelegate.swift */,
 			);
 			path = "iosdc-2020-demo";
 			sourceTree = "<group>";
@@ -126,6 +127,29 @@
 				D65529B424E92C9F0027CF5F /* Info.plist */,
 			);
 			path = "iosdc-2020-demoUITests";
+			sourceTree = "<group>";
+		};
+		D65529C024E9313D0027CF5F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D65529C124E931450027CF5F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D655299624E92C920027CF5F /* Main.storyboard */,
+				D655299424E92C920027CF5F /* ViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D65529C224E9314D0027CF5F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
