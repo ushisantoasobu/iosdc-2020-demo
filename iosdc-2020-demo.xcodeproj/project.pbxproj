@@ -132,6 +132,8 @@
 		D65529C024E9313D0027CF5F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				D65529C424E9319A0027CF5F /* Entity */,
+				D65529C324E931900027CF5F /* Repository */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -139,8 +141,10 @@
 		D65529C124E931450027CF5F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D655299624E92C920027CF5F /* Main.storyboard */,
-				D655299424E92C920027CF5F /* ViewController.swift */,
+				D65529CB24E931EB0027CF5F /* Presenter */,
+				D65529C924E931D00027CF5F /* Storyboard */,
+				D65529CC24E931F20027CF5F /* ViewContract */,
+				D65529CA24E931DB0027CF5F /* ViewController */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -148,8 +152,84 @@
 		D65529C224E9314D0027CF5F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D65529C624E931AB0027CF5F /* DataSource */,
+				D65529C524E931A40027CF5F /* Repository */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		D65529C324E931900027CF5F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D65529C424E9319A0027CF5F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D65529C524E931A40027CF5F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D65529C624E931AB0027CF5F /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D65529C724E931B80027CF5F /* Local */,
+				D65529C824E931BD0027CF5F /* Remote */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		D65529C724E931B80027CF5F /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		D65529C824E931BD0027CF5F /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		D65529C924E931D00027CF5F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D655299624E92C920027CF5F /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D65529CA24E931DB0027CF5F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D655299424E92C920027CF5F /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D65529CB24E931EB0027CF5F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D65529CC24E931F20027CF5F /* ViewContract */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewContract;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
