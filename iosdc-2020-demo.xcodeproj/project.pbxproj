@@ -17,6 +17,15 @@
 		D65529B324E92C9F0027CF5F /* iosdc_2020_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529B224E92C9F0027CF5F /* iosdc_2020_demoUITests.swift */; };
 		D65529CE24E9324A0027CF5F /* SomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529CD24E9324A0027CF5F /* SomeEntity.swift */; };
 		D65529D024E932A90027CF5F /* SomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529CF24E932A90027CF5F /* SomeType.swift */; };
+		D65529D224E933240027CF5F /* SomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529D124E933240027CF5F /* SomeRepository.swift */; };
+		D65529D424E933820027CF5F /* SomeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529D324E933820027CF5F /* SomeRepositoryImpl.swift */; };
+		D65529D824E933E10027CF5F /* SomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529D724E933E10027CF5F /* SomeLocalDataSource.swift */; };
+		D65529DA24E9342D0027CF5F /* SomeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529D924E9342D0027CF5F /* SomeRemoteDataSource.swift */; };
+		D65529DC24E934760027CF5F /* SomeAlamofireDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529DB24E934760027CF5F /* SomeAlamofireDataSource.swift */; };
+		D65529DE24E935190027CF5F /* SomeViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529DD24E935190027CF5F /* SomeViewContract.swift */; };
+		D65529E024E935A90027CF5F /* SomePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529DF24E935A90027CF5F /* SomePresenterImpl.swift */; };
+		D65529E224E967E00027CF5F /* SomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529E124E967E00027CF5F /* SomeViewController.swift */; };
+		D65529E424E967FB0027CF5F /* SomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65529E324E967FB0027CF5F /* SomeViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,15 @@
 		D65529B424E92C9F0027CF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D65529CD24E9324A0027CF5F /* SomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeEntity.swift; sourceTree = "<group>"; };
 		D65529CF24E932A90027CF5F /* SomeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeType.swift; sourceTree = "<group>"; };
+		D65529D124E933240027CF5F /* SomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeRepository.swift; sourceTree = "<group>"; };
+		D65529D324E933820027CF5F /* SomeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeRepositoryImpl.swift; sourceTree = "<group>"; };
+		D65529D724E933E10027CF5F /* SomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeLocalDataSource.swift; sourceTree = "<group>"; };
+		D65529D924E9342D0027CF5F /* SomeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeRemoteDataSource.swift; sourceTree = "<group>"; };
+		D65529DB24E934760027CF5F /* SomeAlamofireDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeAlamofireDataSource.swift; sourceTree = "<group>"; };
+		D65529DD24E935190027CF5F /* SomeViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewContract.swift; sourceTree = "<group>"; };
+		D65529DF24E935A90027CF5F /* SomePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomePresenterImpl.swift; sourceTree = "<group>"; };
+		D65529E124E967E00027CF5F /* SomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewController.swift; sourceTree = "<group>"; };
+		D65529E324E967FB0027CF5F /* SomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SomeViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +183,7 @@
 		D65529C324E931900027CF5F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				D65529D124E933240027CF5F /* SomeRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -181,6 +200,7 @@
 		D65529C524E931A40027CF5F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				D65529D324E933820027CF5F /* SomeRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -197,6 +217,8 @@
 		D65529C724E931B80027CF5F /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				D65529D524E933C90027CF5F /* Impl */,
+				D65529D724E933E10027CF5F /* SomeLocalDataSource.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -204,6 +226,8 @@
 		D65529C824E931BD0027CF5F /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				D65529D624E933CF0027CF5F /* Impl */,
+				D65529D924E9342D0027CF5F /* SomeRemoteDataSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -212,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				D655299624E92C920027CF5F /* Main.storyboard */,
+				D65529E324E967FB0027CF5F /* SomeViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -219,6 +244,7 @@
 		D65529CA24E931DB0027CF5F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D65529E124E967E00027CF5F /* SomeViewController.swift */,
 				D655299424E92C920027CF5F /* ViewController.swift */,
 			);
 			path = ViewController;
@@ -227,6 +253,7 @@
 		D65529CB24E931EB0027CF5F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D65529DF24E935A90027CF5F /* SomePresenterImpl.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -234,8 +261,24 @@
 		D65529CC24E931F20027CF5F /* ViewContract */ = {
 			isa = PBXGroup;
 			children = (
+				D65529DD24E935190027CF5F /* SomeViewContract.swift */,
 			);
 			path = ViewContract;
+			sourceTree = "<group>";
+		};
+		D65529D524E933C90027CF5F /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		D65529D624E933CF0027CF5F /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				D65529DB24E934760027CF5F /* SomeAlamofireDataSource.swift */,
+			);
+			path = Impl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +388,7 @@
 				D655299D24E92C9F0027CF5F /* LaunchScreen.storyboard in Resources */,
 				D655299A24E92C9F0027CF5F /* Assets.xcassets in Resources */,
 				D655299824E92C920027CF5F /* Main.storyboard in Resources */,
+				D65529E424E967FB0027CF5F /* SomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,11 +413,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65529E024E935A90027CF5F /* SomePresenterImpl.swift in Sources */,
 				D65529CE24E9324A0027CF5F /* SomeEntity.swift in Sources */,
 				D655299524E92C920027CF5F /* ViewController.swift in Sources */,
+				D65529E224E967E00027CF5F /* SomeViewController.swift in Sources */,
 				D655299124E92C920027CF5F /* AppDelegate.swift in Sources */,
+				D65529DA24E9342D0027CF5F /* SomeRemoteDataSource.swift in Sources */,
+				D65529D424E933820027CF5F /* SomeRepositoryImpl.swift in Sources */,
+				D65529DC24E934760027CF5F /* SomeAlamofireDataSource.swift in Sources */,
 				D655299324E92C920027CF5F /* SceneDelegate.swift in Sources */,
+				D65529DE24E935190027CF5F /* SomeViewContract.swift in Sources */,
 				D65529D024E932A90027CF5F /* SomeType.swift in Sources */,
+				D65529D824E933E10027CF5F /* SomeLocalDataSource.swift in Sources */,
+				D65529D224E933240027CF5F /* SomeRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
