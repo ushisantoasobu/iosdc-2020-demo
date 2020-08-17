@@ -28,12 +28,7 @@ class iosdc_2020_demoTests: XCTestCase {
 
     func testViewDidLoad() throws {
         repository.stubbedFetchResult = [
-            SomeEntity(id: 999,
-                       name: "",
-                       type: .fuga,
-                       hoge: HogeEntity(id: 0, num: 0),
-                       imageUrl: nil,
-                       createdAt: Date())
+            SomeEntity. testData(id: 999)
         ]
         presenter.viewDidLoad()
         XCTAssertEqual(view.invokedFetchedParameters!.someEntities.count, 1)

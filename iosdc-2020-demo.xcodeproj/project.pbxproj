@@ -10,6 +10,7 @@
 		3153434CC68652315CD1783D /* Pods_iosdc_2020_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1CE123E70F6A077DB85A3A /* Pods_iosdc_2020_demo.framework */; };
 		913063894176D03ED32DB85A /* Pods_iosdc_2020_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E5C5598EAB17CA9046037F /* Pods_iosdc_2020_demoUITests.framework */; };
 		9F3AAD54EE516B615876B6D5 /* Pods_iosdc_2020_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6279337C0AE27E48C049D0DF /* Pods_iosdc_2020_demoTests.framework */; };
+		D652671624EACBFA00B8B27C /* testData.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652671524EACBFA00B8B27C /* testData.generated.swift */; };
 		D655299124E92C920027CF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299024E92C920027CF5F /* AppDelegate.swift */; };
 		D655299324E92C920027CF5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299224E92C920027CF5F /* SceneDelegate.swift */; };
 		D655299524E92C920027CF5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299424E92C920027CF5F /* ViewController.swift */; };
@@ -62,6 +63,7 @@
 		7D9247A7B5611853B208E928 /* Pods-iosdc-2020-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosdc-2020-demo.debug.xcconfig"; path = "Target Support Files/Pods-iosdc-2020-demo/Pods-iosdc-2020-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		B5532BD7E64115030A20B666 /* Pods-iosdc-2020-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosdc-2020-demoTests.debug.xcconfig"; path = "Target Support Files/Pods-iosdc-2020-demoTests/Pods-iosdc-2020-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D485E88DE398D3A8D9A2D74A /* Pods-iosdc-2020-demoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosdc-2020-demoUITests.release.xcconfig"; path = "Target Support Files/Pods-iosdc-2020-demoUITests/Pods-iosdc-2020-demoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D652671524EACBFA00B8B27C /* testData.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testData.generated.swift; sourceTree = "<group>"; };
 		D655298D24E92C920027CF5F /* iosdc-2020-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosdc-2020-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D655299024E92C920027CF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D655299224E92C920027CF5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,7 +135,6 @@
 				FE951826A12432EF8DE691DB /* Pods-iosdc-2020-demoUITests.debug.xcconfig */,
 				D485E88DE398D3A8D9A2D74A /* Pods-iosdc-2020-demoUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -145,6 +146,14 @@
 				25E5C5598EAB17CA9046037F /* Pods_iosdc_2020_demoUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D652671424EACBFA00B8B27C /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				D652671524EACBFA00B8B27C /* testData.generated.swift */,
+			);
+			path = generated;
 			sourceTree = "<group>";
 		};
 		D655298424E92C920027CF5F = {
@@ -188,6 +197,7 @@
 		D65529A624E92C9F0027CF5F /* iosdc-2020-demoTests */ = {
 			isa = PBXGroup;
 			children = (
+				D652671424EACBFA00B8B27C /* generated */,
 				D65529A924E92C9F0027CF5F /* Info.plist */,
 				D65529E524E96A430027CF5F /* SomePresenterTests.swift */,
 			);
@@ -574,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D652671624EACBFA00B8B27C /* testData.generated.swift in Sources */,
 				D65529E624E96A430027CF5F /* SomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
