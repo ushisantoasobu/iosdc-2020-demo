@@ -9,21 +9,6 @@
 import Foundation
 import UIKit
 
-struct Factory {
-
-    func createSomeViewController() -> SomeViewController {
-        let vc = SomeViewController.instantiate()
-        let dataSource = SomeAlamofireDataSource()
-        let repository = SomeRepositoryImpl(dataSource: dataSource)
-        let presenter = SomePresenterImpl(
-            view: vc,
-            repository: repository
-        )
-        vc.presenter = presenter
-        return vc
-    }
-}
-
 class SomeViewController: UIViewController, SomeView {
 
     var presenter: SomePresenter!
