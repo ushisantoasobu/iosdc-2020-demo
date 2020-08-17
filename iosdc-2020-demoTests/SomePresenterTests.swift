@@ -31,6 +31,7 @@ class iosdc_2020_demoTests: XCTestCase {
             SomeEntity(id: 999,
                        name: "",
                        type: .fuga,
+                       hoge: HogeEntity(id: 0, num: 0),
                        imageUrl: nil,
                        createdAt: Date())
         ]

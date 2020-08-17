@@ -29,6 +29,7 @@
 		D65529E924EAB5AF0027CF5F /* DataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529E824EAB5AF0027CF5F /* DataSourceFactory.swift */; };
 		D65529EB24EAB5C10027CF5F /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529EA24EAB5C10027CF5F /* RepositoryFactory.swift */; };
 		D65529EF24EAB7420027CF5F /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529EE24EAB7420027CF5F /* ViewControllerFactory.swift */; };
+		D65529F124EABD700027CF5F /* HogeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529F024EABD700027CF5F /* HogeEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		D65529E824EAB5AF0027CF5F /* DataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceFactory.swift; sourceTree = "<group>"; };
 		D65529EA24EAB5C10027CF5F /* RepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
 		D65529EE24EAB7420027CF5F /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		D65529F024EABD700027CF5F /* HogeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HogeEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 		D65529C424E9319A0027CF5F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D65529F024EABD700027CF5F /* HogeEntity.swift */,
 				D65529CD24E9324A0027CF5F /* SomeEntity.swift */,
 				D65529CF24E932A90027CF5F /* SomeType.swift */,
 			);
@@ -442,6 +445,7 @@
 				D65529DC24E934760027CF5F /* SomeAlamofireDataSource.swift in Sources */,
 				D655299324E92C920027CF5F /* SceneDelegate.swift in Sources */,
 				D65529DE24E935190027CF5F /* SomeViewContract.swift in Sources */,
+				D65529F124EABD700027CF5F /* HogeEntity.swift in Sources */,
 				D65529D024E932A90027CF5F /* SomeType.swift in Sources */,
 				D65529EF24EAB7420027CF5F /* ViewControllerFactory.swift in Sources */,
 				D65529D824E933E10027CF5F /* SomeLocalDataSource.swift in Sources */,
