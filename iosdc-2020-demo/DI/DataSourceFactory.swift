@@ -10,6 +10,10 @@ import Foundation
 
 struct DataSourceFactory {
 
+    static func create() -> SomeLocalDataSource {
+        return SomeCoreDataSource()
+    }
+
     static func create() -> SomeRemoteDataSource {
         return SomeAlamofireDataSource()
     }

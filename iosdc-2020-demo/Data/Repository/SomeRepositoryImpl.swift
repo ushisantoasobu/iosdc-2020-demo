@@ -10,17 +10,25 @@ import Foundation
 
 struct SomeRepositoryImpl: SomeRepository {
 
-    let dataSource: SomeRemoteDataSource
+    let localDataSource: SomeLocalDataSource
+    let remoteDataSource: SomeRemoteDataSource
 
-    init(dataSource: SomeRemoteDataSource) {
-        self.dataSource = dataSource
+    init(
+        localDataSource: SomeLocalDataSource,
+        remoteDataSource: SomeRemoteDataSource
+    ) {
+        self.localDataSource = localDataSource
+        self.remoteDataSource = remoteDataSource
     }
 
     func fetch() -> [SomeEntity] {
-        dataSource.fetch()
+        let entities = localDataSource.fetch()
+        if !entities.isEmpty { return entities }
+
+        return remoteDataSource.fetch()
     }
 
     func delete(id: Int) {
-        dataSource.delete(id: id)
+        remoteDataSource.delete(id: id)
     }
 }

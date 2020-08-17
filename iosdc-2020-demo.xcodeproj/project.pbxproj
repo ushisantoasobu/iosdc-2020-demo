@@ -30,6 +30,7 @@
 		D65529EB24EAB5C10027CF5F /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529EA24EAB5C10027CF5F /* RepositoryFactory.swift */; };
 		D65529EF24EAB7420027CF5F /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529EE24EAB7420027CF5F /* ViewControllerFactory.swift */; };
 		D65529F124EABD700027CF5F /* HogeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529F024EABD700027CF5F /* HogeEntity.swift */; };
+		D65529F324EABE530027CF5F /* SomeCoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529F224EABE530027CF5F /* SomeCoreDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D65529EA24EAB5C10027CF5F /* RepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
 		D65529EE24EAB7420027CF5F /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		D65529F024EABD700027CF5F /* HogeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HogeEntity.swift; sourceTree = "<group>"; };
+		D65529F224EABE530027CF5F /* SomeCoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCoreDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 		D65529D524E933C90027CF5F /* Impl */ = {
 			isa = PBXGroup;
 			children = (
+				D65529F224EABE530027CF5F /* SomeCoreDataSource.swift */,
 			);
 			path = Impl;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				D655299524E92C920027CF5F /* ViewController.swift in Sources */,
 				D65529E924EAB5AF0027CF5F /* DataSourceFactory.swift in Sources */,
 				D65529E224E967E00027CF5F /* SomeViewController.swift in Sources */,
+				D65529F324EABE530027CF5F /* SomeCoreDataSource.swift in Sources */,
 				D655299124E92C920027CF5F /* AppDelegate.swift in Sources */,
 				D65529EB24EAB5C10027CF5F /* RepositoryFactory.swift in Sources */,
 				D65529DA24E9342D0027CF5F /* SomeRemoteDataSource.swift in Sources */,

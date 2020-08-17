@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SomeLocalDataSource {
-    //
+    func fetch() -> [SomeEntity]
 }

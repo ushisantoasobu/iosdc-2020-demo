@@ -11,6 +11,9 @@ import Foundation
 struct RepositoryFactory {
 
     static func create() -> SomeRepository {
-        return SomeRepositoryImpl(dataSource: DataSourceFactory.create())
+        return SomeRepositoryImpl(
+            localDataSource: DataSourceFactory.create(),
+            remoteDataSource: DataSourceFactory.create()
+        )
     }
 }
