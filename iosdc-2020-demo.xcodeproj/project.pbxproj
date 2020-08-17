@@ -26,6 +26,9 @@
 		D65529E224E967E00027CF5F /* SomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529E124E967E00027CF5F /* SomeViewController.swift */; };
 		D65529E424E967FB0027CF5F /* SomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65529E324E967FB0027CF5F /* SomeViewController.storyboard */; };
 		D65529E624E96A430027CF5F /* SomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529E524E96A430027CF5F /* SomePresenterTests.swift */; };
+		D65529E924EAB5AF0027CF5F /* DataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529E824EAB5AF0027CF5F /* DataSourceFactory.swift */; };
+		D65529EB24EAB5C10027CF5F /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529EA24EAB5C10027CF5F /* RepositoryFactory.swift */; };
+		D65529EF24EAB7420027CF5F /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65529EE24EAB7420027CF5F /* ViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		D65529E124E967E00027CF5F /* SomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewController.swift; sourceTree = "<group>"; };
 		D65529E324E967FB0027CF5F /* SomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SomeViewController.storyboard; sourceTree = "<group>"; };
 		D65529E524E96A430027CF5F /* SomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomePresenterTests.swift; sourceTree = "<group>"; };
+		D65529E824EAB5AF0027CF5F /* DataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceFactory.swift; sourceTree = "<group>"; };
+		D65529EA24EAB5C10027CF5F /* RepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
+		D65529EE24EAB7420027CF5F /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 				D655299024E92C920027CF5F /* AppDelegate.swift */,
 				D655299924E92C9F0027CF5F /* Assets.xcassets */,
 				D65529C224E9314D0027CF5F /* Data */,
+				D65529E724EAB5940027CF5F /* DI */,
 				D65529C024E9313D0027CF5F /* Domain */,
 				D655299E24E92C9F0027CF5F /* Info.plist */,
 				D655299B24E92C9F0027CF5F /* LaunchScreen.storyboard */,
@@ -281,6 +288,16 @@
 			path = Impl;
 			sourceTree = "<group>";
 		};
+		D65529E724EAB5940027CF5F /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				D65529E824EAB5AF0027CF5F /* DataSourceFactory.swift */,
+				D65529EA24EAB5C10027CF5F /* RepositoryFactory.swift */,
+				D65529EE24EAB7420027CF5F /* ViewControllerFactory.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,14 +433,17 @@
 				D65529E024E935A90027CF5F /* SomePresenterImpl.swift in Sources */,
 				D65529CE24E9324A0027CF5F /* SomeEntity.swift in Sources */,
 				D655299524E92C920027CF5F /* ViewController.swift in Sources */,
+				D65529E924EAB5AF0027CF5F /* DataSourceFactory.swift in Sources */,
 				D65529E224E967E00027CF5F /* SomeViewController.swift in Sources */,
 				D655299124E92C920027CF5F /* AppDelegate.swift in Sources */,
+				D65529EB24EAB5C10027CF5F /* RepositoryFactory.swift in Sources */,
 				D65529DA24E9342D0027CF5F /* SomeRemoteDataSource.swift in Sources */,
 				D65529D424E933820027CF5F /* SomeRepositoryImpl.swift in Sources */,
 				D65529DC24E934760027CF5F /* SomeAlamofireDataSource.swift in Sources */,
 				D655299324E92C920027CF5F /* SceneDelegate.swift in Sources */,
 				D65529DE24E935190027CF5F /* SomeViewContract.swift in Sources */,
 				D65529D024E932A90027CF5F /* SomeType.swift in Sources */,
+				D65529EF24EAB7420027CF5F /* ViewControllerFactory.swift in Sources */,
 				D65529D824E933E10027CF5F /* SomeLocalDataSource.swift in Sources */,
 				D65529D224E933240027CF5F /* SomeRepository.swift in Sources */,
 			);
