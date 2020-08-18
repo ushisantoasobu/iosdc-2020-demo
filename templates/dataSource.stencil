@@ -1,0 +1,8 @@
+struct DataSourceFactory {
+
+    {% for struct in types.structs where not struct.inheritedTypes.first == nil %}
+    static func create() -> {{ struct.inheritedTypes.first }} {
+        {{ struct.name }}()
+    }
+    {% endfor %}
+}

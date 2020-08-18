@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct RepositoryFactory {
-
-    static func create() -> SomeRepository {
-        return SomeRepositoryImpl(
-            localDataSource: DataSourceFactory.create(),
-            remoteDataSource: DataSourceFactory.create()
-        )
-    }
-}
+//struct RepositoryFactory {
+//
+//    static func create() -> SomeRepository {
+//        return SomeRepositoryImpl(
+//            localDataSource: DataSourceFactory.create(),
+//            remoteDataSource: DataSourceFactory.create()
+//        )
+//    }
+//}

@@ -1,0 +1,17 @@
+struct RepositoryFactory {
+
+    {% for struct in types.structs where not struct.inheritedTypes.first == nil %}
+    static func create() -> {{ struct.inheritedTypes.first }} {
+        {% if struct.storedVariables.count == 0 %}
+        {{ struct.name }}()
+        {% else %}
+        {{ struct.name }}(
+            {% for variable in struct.storedVariables where variable.defaultValue == nil %}
+            {% if variable.typeName.name|hasSuffix:"DataSource" %}{{variable.name}}: DataSourceFactory.create(){% if not forloop.last %},{% endif %}
+            {% endif %}
+            {% endfor %}
+        )
+        {% endif %}
+    }
+    {% endfor %}
+}
