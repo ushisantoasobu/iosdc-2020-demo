@@ -17,6 +17,9 @@
 		D652676524F4B34000B8B27C /* dataSource.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676224F4B34000B8B27C /* dataSource.stencil */; };
 		D652676624F4B34000B8B27C /* testData.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676324F4B34000B8B27C /* testData.stencil */; };
 		D652676824F4E7AA00B8B27C /* mock.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676724F4E7AA00B8B27C /* mock.stencil */; };
+		D652678124F4EC2500B8B27C /* repositoryMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652677A24F4EC2500B8B27C /* repositoryMock.generated.swift */; };
+		D652678224F4EC2500B8B27C /* localDataSource.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652677E24F4EC2500B8B27C /* localDataSource.generated.swift */; };
+		D652678324F4EC2500B8B27C /* remoteDataSource.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652678024F4EC2500B8B27C /* remoteDataSource.generated.swift */; };
 		D655299124E92C920027CF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299024E92C920027CF5F /* AppDelegate.swift */; };
 		D655299324E92C920027CF5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299224E92C920027CF5F /* SceneDelegate.swift */; };
 		D655299524E92C920027CF5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299424E92C920027CF5F /* ViewController.swift */; };
@@ -76,6 +79,9 @@
 		D652676224F4B34000B8B27C /* dataSource.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataSource.stencil; sourceTree = "<group>"; };
 		D652676324F4B34000B8B27C /* testData.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testData.stencil; sourceTree = "<group>"; };
 		D652676724F4E7AA00B8B27C /* mock.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mock.stencil; sourceTree = "<group>"; };
+		D652677A24F4EC2500B8B27C /* repositoryMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = repositoryMock.generated.swift; sourceTree = "<group>"; };
+		D652677E24F4EC2500B8B27C /* localDataSource.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localDataSource.generated.swift; sourceTree = "<group>"; };
+		D652678024F4EC2500B8B27C /* remoteDataSource.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = remoteDataSource.generated.swift; sourceTree = "<group>"; };
 		D655298D24E92C920027CF5F /* iosdc-2020-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosdc-2020-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D655299024E92C920027CF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D655299224E92C920027CF5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +169,8 @@
 		D652671424EACBFA00B8B27C /* generated */ = {
 			isa = PBXGroup;
 			children = (
+				D652677B24F4EC2500B8B27C /* Data */,
+				D652677824F4EC2500B8B27C /* Domain */,
 				D652671524EACBFA00B8B27C /* testData.generated.swift */,
 			);
 			path = generated;
@@ -186,6 +194,55 @@
 				D652676324F4B34000B8B27C /* testData.stencil */,
 			);
 			path = templates;
+			sourceTree = "<group>";
+		};
+		D652677824F4EC2500B8B27C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D652677924F4EC2500B8B27C /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D652677924F4EC2500B8B27C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D652677A24F4EC2500B8B27C /* repositoryMock.generated.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D652677B24F4EC2500B8B27C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D652677C24F4EC2500B8B27C /* DataSource */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D652677C24F4EC2500B8B27C /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D652677D24F4EC2500B8B27C /* Local */,
+				D652677F24F4EC2500B8B27C /* Remote */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		D652677D24F4EC2500B8B27C /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				D652677E24F4EC2500B8B27C /* localDataSource.generated.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		D652677F24F4EC2500B8B27C /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				D652678024F4EC2500B8B27C /* remoteDataSource.generated.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 		D655298424E92C920027CF5F = {
@@ -602,7 +659,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "Pods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Domain/Repository --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Domain/Repository\nPods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Data/DataSource/Local --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Data/DataSource/Local\nPods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Data/DataSource/Remote --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Data/DataSource/Remote\n";
+			shellScript = "Pods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Domain/Repository --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Domain/Repository/repositoryMock.generated.swift   \nPods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Data/DataSource/Local --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Data/DataSource/Local/localDataSource.generated.swift\nPods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Data/DataSource/Remote --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Data/DataSource/Remote/remoteDataSource.generated.swift\n";
 		};
 		E5C3B5CDD1C27477FD6C8741 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -660,7 +717,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D652678124F4EC2500B8B27C /* repositoryMock.generated.swift in Sources */,
+				D652678224F4EC2500B8B27C /* localDataSource.generated.swift in Sources */,
 				D652671624EACBFA00B8B27C /* testData.generated.swift in Sources */,
+				D652678324F4EC2500B8B27C /* remoteDataSource.generated.swift in Sources */,
 				D65529E624E96A430027CF5F /* SomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

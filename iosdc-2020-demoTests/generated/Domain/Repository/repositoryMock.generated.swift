@@ -1,6 +1,7 @@
 // Generated using Sourcery 0.18.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
+
 import Foundation
 @testable import iosdc_2020_demo
 
@@ -18,7 +19,7 @@ import Foundation
 
 
 
-class MockedSomeLocalDataSource: SomeLocalDataSource {
+class MockedSomeRepository: SomeRepository {
     var invokedFetch = false
     var invokedFetchCount = 0
     var stubbedFetchResult: [SomeEntity]!
@@ -26,5 +27,15 @@ class MockedSomeLocalDataSource: SomeLocalDataSource {
         invokedFetch = true
         invokedFetchCount += 1
         return stubbedFetchResult
+    }
+    var invokedDelete = false
+    var invokedDeleteCount = 0
+    var invokedDeleteParameters: (id: Int, Void)?
+    var invokedDeleteParametersList = [(id: Int, Void)]()
+    func delete(id: Int) -> Void {
+        invokedDelete = true
+        invokedDeleteCount += 1
+        invokedDeleteParameters = (id, ())
+        invokedDeleteParametersList.append((id, ()))
     }
 }
