@@ -9,7 +9,7 @@
 import XCTest
 @testable import iosdc_2020_demo
 
-class iosdc_2020_demoTests: XCTestCase {
+class SomePresenterTests: XCTestCase {
 
     var presenter: SomePresenterImpl!
 
@@ -33,7 +33,7 @@ class iosdc_2020_demoTests: XCTestCase {
         presenter.viewDidLoad()
         XCTAssertEqual(view.invokedFetchedParameters!.someEntities.count, 1)
         XCTAssertEqual(view.invokedFetchedParameters!.someEntities.first!.id, 999)
-    }
+    }   
 }
 
 class MockedSomeView: SomeView {

@@ -20,6 +20,7 @@
 		D652678124F4EC2500B8B27C /* repositoryMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652677A24F4EC2500B8B27C /* repositoryMock.generated.swift */; };
 		D652678224F4EC2500B8B27C /* localDataSource.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652677E24F4EC2500B8B27C /* localDataSource.generated.swift */; };
 		D652678324F4EC2500B8B27C /* remoteDataSource.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652678024F4EC2500B8B27C /* remoteDataSource.generated.swift */; };
+		D652678524F4ECEE00B8B27C /* SomeRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652678424F4ECEE00B8B27C /* SomeRepositoryTests.swift */; };
 		D655299124E92C920027CF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299024E92C920027CF5F /* AppDelegate.swift */; };
 		D655299324E92C920027CF5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299224E92C920027CF5F /* SceneDelegate.swift */; };
 		D655299524E92C920027CF5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299424E92C920027CF5F /* ViewController.swift */; };
@@ -82,6 +83,7 @@
 		D652677A24F4EC2500B8B27C /* repositoryMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = repositoryMock.generated.swift; sourceTree = "<group>"; };
 		D652677E24F4EC2500B8B27C /* localDataSource.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localDataSource.generated.swift; sourceTree = "<group>"; };
 		D652678024F4EC2500B8B27C /* remoteDataSource.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = remoteDataSource.generated.swift; sourceTree = "<group>"; };
+		D652678424F4ECEE00B8B27C /* SomeRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeRepositoryTests.swift; sourceTree = "<group>"; };
 		D655298D24E92C920027CF5F /* iosdc-2020-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosdc-2020-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D655299024E92C920027CF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D655299224E92C920027CF5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				D652671424EACBFA00B8B27C /* generated */,
 				D65529A924E92C9F0027CF5F /* Info.plist */,
 				D65529E524E96A430027CF5F /* SomePresenterTests.swift */,
+				D652678424F4ECEE00B8B27C /* SomeRepositoryTests.swift */,
 			);
 			path = "iosdc-2020-demoTests";
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				D652678124F4EC2500B8B27C /* repositoryMock.generated.swift in Sources */,
 				D652678224F4EC2500B8B27C /* localDataSource.generated.swift in Sources */,
 				D652671624EACBFA00B8B27C /* testData.generated.swift in Sources */,
+				D652678524F4ECEE00B8B27C /* SomeRepositoryTests.swift in Sources */,
 				D652678324F4EC2500B8B27C /* remoteDataSource.generated.swift in Sources */,
 				D65529E624E96A430027CF5F /* SomePresenterTests.swift in Sources */,
 			);
