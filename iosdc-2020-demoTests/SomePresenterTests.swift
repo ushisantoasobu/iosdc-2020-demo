@@ -49,23 +49,24 @@ class MockedSomeView: SomeView {
     }
 }
 
-class MockedSomeRepository: SomeRepository {
-    var invokedFetch = false
-    var invokedFetchCount = 0
-    var stubbedFetchResult: [SomeEntity]! = []
-    func fetch() -> [SomeEntity] {
-        invokedFetch = true
-        invokedFetchCount += 1
-        return stubbedFetchResult
-    }
-    var invokedDelete = false
-    var invokedDeleteCount = 0
-    var invokedDeleteParameters: (id: Int, Void)?
-    var invokedDeleteParametersList = [(id: Int, Void)]()
-    func delete(id: Int) {
-        invokedDelete = true
-        invokedDeleteCount += 1
-        invokedDeleteParameters = (id, ())
-        invokedDeleteParametersList.append((id, ()))
-    }
-}
+// 自動生成されるようになったので不要
+//class MockedSomeRepository: SomeRepository {
+//    var invokedFetch = false
+//    var invokedFetchCount = 0
+//    var stubbedFetchResult: [SomeEntity]! = []
+//    func fetch() -> [SomeEntity] {
+//        invokedFetch = true
+//        invokedFetchCount += 1
+//        return stubbedFetchResult
+//    }
+//    var invokedDelete = false
+//    var invokedDeleteCount = 0
+//    var invokedDeleteParameters: (id: Int, Void)?
+//    var invokedDeleteParametersList = [(id: Int, Void)]()
+//    func delete(id: Int) {
+//        invokedDelete = true
+//        invokedDeleteCount += 1
+//        invokedDeleteParameters = (id, ())
+//        invokedDeleteParametersList.append((id, ()))
+//    }
+//}
