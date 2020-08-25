@@ -12,3 +12,8 @@ enum SomeType {
     case hoge
     case fuga
 }
+
+enum SomeTypeWithAssociatedValue {
+    case hoge(name: String)
+    case fuga
+}

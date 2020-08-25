@@ -12,6 +12,7 @@ struct SomeEntity {
     let id: Int
     let name: String
     let type: SomeType
+    let complicatedType: SomeTypeWithAssociatedValue
     let hoge: HogeEntity
     let imageUrl: String?
     let createdAt: Date

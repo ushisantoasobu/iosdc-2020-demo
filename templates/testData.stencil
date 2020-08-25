@@ -2,39 +2,41 @@ import Foundation
 @testable import iosdc_2020_demo
 
 {# うまく自動生成できないものはこちらに記載する #}
-{% for struct in types.structs where not struct.name == "Hoge" %}
+
+{% for struct in types.structs %}
 extension {{ struct.name }} {
   static func testData(
-      {% for variable in struct.storedVariables %}
-      {# ----- Optional -----#}
-      {% if variable.typeName.isOptional %}{{variable.name}}: {{variable.typeName}} = nil{% if not forloop.last %},{% endif %}
-      {# ----- 標準Type -----#}
-      {% elif variable.typeName.name == "Int" %}{{variable.name}}: {{variable.typeName}} = 0{% if not forloop.last %},{% endif %}
-      {% elif variable.typeName.name == "String" %}{{variable.name}}: {{variable.typeName}} = ""{% if not forloop.last %},{% endif %}
-      {% elif variable.typeName.name == "Bool" %}{{variable.name}}: {{variable.typeName}} = false{% if not forloop.last %},{% endif %}
-      {% elif variable.typeName.name == "Date" %}{{variable.name}}: {{variable.typeName}} = Date(){% if not forloop.last %},{% endif %}
-      {% elif variable.typeName.name == "Double" %}{{variable.name}}: {{variable.typeName}} = 0.0{% if not forloop.last %},{% endif %}
-      {% elif variable.typeName.name == "Float" %}{{variable.name}}: {{variable.typeName}} = 0.0{% if not forloop.last %},{% endif %}
-      {% elif variable.typeName.name == "URL" %}{{variable.name}}: {{variable.typeName}} = URL(string: "https://mixi.co.jp")!{% if not forloop.last %},{% endif %}
-      {% elif variable.typeName.name == "UIColor" %}{{variable.name}}: {{variable.typeName}} = UIColor.clear{% if not forloop.last %},{% endif %}
-      {% elif variable.typeName.isArray %}{{variable.name}}: {{variable.typeName}} = []{% if not forloop.last %},{% endif %}
-      {% elif variable.typeName.isDictionary %}{{variable.name}}: {{variable.typeName}} = [:]{% if not forloop.last %},{% endif %}
-      {% elif variable.typeName.name == "CGFloat" %}{{variable.name}}: {{variable.typeName}} = 0{% if not forloop.last %},{% endif %}
-      {# ----- Enum -----#}
-      {# ---------- AssociatedValueありのEnumは現状難しかったので「手動」のところに追加 ----------#}
-      {% elif variable.type.kind == "enum" and not variable.type.cases.first.hasAssociatedValue %}{{variable.name}}: {{variable.typeName}} = .{{variable.type.cases.first.name}}{% if not forloop.last %},{% endif %}
-      {# ----- 難しいものは最悪「直書き」する -----#}
-      {% elif variable.typeName.name == "Fuga" %}{{variable.name}}: {{variable.typeName}} = .fuga{% if not forloop.last %},{% endif %}
-      {# ----- それ以外は他のEntityなはずなので入れ子とする -----#}
+      {% for variable in struct.allVariables %}
+      {# ----- オプショナル ----- #}
+      {% if variable.typeName.isOptional %}{{ variable.name }}: {{ variable.typeName }} = nil{% if not forloop.last %},{% endif %}
+      {# ----- 一般的な型 ----- #}
+      {% elif variable.typeName.name == "Int" %}{{ variable.name }}: {{ variable.typeName }} = 0{% if not forloop.last %},{% endif %}
+      {% elif variable.typeName.name == "String" %}{{ variable.name }}: {{ variable.typeName }} = ""{% if not forloop.last %},{% endif %}
+      {% elif variable.typeName.name == "Bool" %}{{ variable.name }}: {{ variable.typeName }} = false{% if not forloop.last %},{% endif %}
+      {% elif variable.typeName.name == "Date" %}{{ variable.name }}: {{ variable.typeName }} = Date(){% if not forloop.last %},{% endif %}
+      {% elif variable.typeName.name == "Double" %}{{ variable.name }}: {{ variable.typeName }} = 0.0{% if not forloop.last %},{% endif %}
+      {% elif variable.typeName.name == "Float" %}{{ variable.name }}: {{ variable.typeName }} = 0.0{% if not forloop.last %},{% endif %}
+      {% elif variable.typeName.name == "CGFloat" %}{{ variable.name }}: {{ variable.typeName }} = 0{% if not forloop.last %},{% endif %}
+      {% elif variable.typeName.name == "URL" %}{{ variable.name }}: {{ variable.typeName }} = URL(string: "https://mixi.co.jp")!{% if not forloop.last %},{% endif %}
+      {% elif variable.typeName.name == "UIColor" %}{{ variable.name }}: {{ variable.typeName }} = UIColor.clear{% if not forloop.last %},{% endif %}
+      {% elif variable.typeName.isArray %}{{ variable.name }}: {{ variable.typeName }} = []{% if not forloop.last %},{% endif %}
+      {% elif variable.typeName.isDictionary %}{{ variable.name }}: {{ variable.typeName }} = [:]{% if not forloop.last %},{% endif %}
+      {# ----- Enum ----- #}
+      {# ----- AssociatedValueありのEnumは現状難しかったので「直書き」のところに追加 ----- #}
+      {% elif variable.type.kind == "enum" and not variable.type.cases.first.hasAssociatedValue %}{{ variable.name }}: {{ variable.typeName }} = .{{ variable.type.cases.first.name }}{% if not forloop.last %},{% endif %}
+      {# ----- 難しいものは最悪「直書き」する ----- #}
+      {% elif variable.typeName.name == "SomeTypeWithAssociatedValue" %}{{ variable.name }}: {{ variable.typeName }} = .hoge(name: ""){% if not forloop.last %},{% endif %}
+      {# ----- それ以外は他のEntityなはずなので入れ子とする ----- #}
       {% else %}{{ variable.name }}: {{ variable.typeName }} = {{ variable.typeName }}.testData(){% if not forloop.last %},{% endif %}
       {% endif %}
       {% endfor %}
   ) -> {{ struct.name }} {
       return {{ struct.name }}(
-          {% for variable in struct.storedVariables %}
-          {{variable.name}}: {{variable.name}}{% if not forloop.last %},{% endif %}
+          {% for variable in struct.allVariables %}
+          {{ variable.name }}: {{ variable.name }}{% if not forloop.last %},{% endif %}
           {% endfor %}
       )
   }
-}
+}   
 {% endfor %}
+
