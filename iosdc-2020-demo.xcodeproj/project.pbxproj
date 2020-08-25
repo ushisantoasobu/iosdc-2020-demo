@@ -16,6 +16,7 @@
 		D652676424F4B34000B8B27C /* repository.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676124F4B34000B8B27C /* repository.stencil */; };
 		D652676524F4B34000B8B27C /* dataSource.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676224F4B34000B8B27C /* dataSource.stencil */; };
 		D652676624F4B34000B8B27C /* testData.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676324F4B34000B8B27C /* testData.stencil */; };
+		D652676824F4E7AA00B8B27C /* mock.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676724F4E7AA00B8B27C /* mock.stencil */; };
 		D655299124E92C920027CF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299024E92C920027CF5F /* AppDelegate.swift */; };
 		D655299324E92C920027CF5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299224E92C920027CF5F /* SceneDelegate.swift */; };
 		D655299524E92C920027CF5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299424E92C920027CF5F /* ViewController.swift */; };
@@ -74,6 +75,7 @@
 		D652676124F4B34000B8B27C /* repository.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = repository.stencil; sourceTree = "<group>"; };
 		D652676224F4B34000B8B27C /* dataSource.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataSource.stencil; sourceTree = "<group>"; };
 		D652676324F4B34000B8B27C /* testData.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testData.stencil; sourceTree = "<group>"; };
+		D652676724F4E7AA00B8B27C /* mock.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mock.stencil; sourceTree = "<group>"; };
 		D655298D24E92C920027CF5F /* iosdc-2020-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosdc-2020-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D655299024E92C920027CF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D655299224E92C920027CF5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,8 +180,9 @@
 		D652676024F4B34000B8B27C /* templates */ = {
 			isa = PBXGroup;
 			children = (
-				D652676124F4B34000B8B27C /* repository.stencil */,
 				D652676224F4B34000B8B27C /* dataSource.stencil */,
+				D652676724F4E7AA00B8B27C /* mock.stencil */,
+				D652676124F4B34000B8B27C /* repository.stencil */,
 				D652676324F4B34000B8B27C /* testData.stencil */,
 			);
 			path = templates;
@@ -398,6 +401,7 @@
 				D655298A24E92C920027CF5F /* Frameworks */,
 				D655298B24E92C920027CF5F /* Resources */,
 				D652671724EC1C4E00B8B27C /* ShellScript */,
+				D652676924F4EA4600B8B27C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -500,6 +504,7 @@
 				D65529E424E967FB0027CF5F /* SomeViewController.storyboard in Resources */,
 				D652676424F4B34000B8B27C /* repository.stencil in Resources */,
 				D652676524F4B34000B8B27C /* dataSource.stencil in Resources */,
+				D652676824F4E7AA00B8B27C /* mock.stencil in Resources */,
 				D652676624F4B34000B8B27C /* testData.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +586,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "Pods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Domain/Entity --templates templates/testData.stencil --output iosdc-2020-demoTests/generated\n";
+		};
+		D652676924F4EA4600B8B27C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "Pods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Domain/Repository --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Domain/Repository\nPods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Data/DataSource/Local --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Data/DataSource/Local\nPods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Data/DataSource/Remote --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Data/DataSource/Remote\n";
 		};
 		E5C3B5CDD1C27477FD6C8741 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

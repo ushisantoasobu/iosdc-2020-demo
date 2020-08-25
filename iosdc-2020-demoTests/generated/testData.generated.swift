@@ -15,7 +15,7 @@ extension HogeEntity {
           num: num
       )
   }
-}
+}   
 extension SomeEntity {
   static func testData(
       id: Int = 0,
@@ -36,5 +36,5 @@ extension SomeEntity {
           createdAt: createdAt
       )
   }
-}
+}   
 

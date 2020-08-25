@@ -1,0 +1,101 @@
+import Foundation
+@testable import iosdc_2020_demo
+
+/**
+ * 以下把握できている自動生成が難しいケース
+ *  - オーバーロードのメソッドをもつもの
+ *  - クロージャをメソッドの引数にもつもの
+ *  - クラス（具体的なものとしてはUIView）を継承しているプロトコル
+ */
+
+{% macro generateVariables variable %}
+    var invoked{{ variable.name|upperFirstLetter }}Getter = false
+    var invoked{{ variable.name|upperFirstLetter }}GetterCount = 0
+    var stubbed{{ variable.name|upperFirstLetter }}: {% call makeImplicitlyUnwrappedOptional variable.typeName %}
+    {% if variable.isMutable %} {# setterあり = isMutable #}
+    var invoked{{ variable.name|upperFirstLetter }}Setter = false
+    var invoked{{ variable.name|upperFirstLetter }}SetterCount = 0
+    var invoked{{ variable.name|upperFirstLetter }}: {{ variable.typeName.name }}?
+    var invoked{{ variable.name|upperFirstLetter }}List = [{{ variable.typeName.name }}]()
+    {% endif %}
+    {% ifnot variable.isMutable %} {# setterあり = isMutable #}
+    var {{ variable.name }}: {{ variable.typeName.name }} {
+        invoked{{ variable.name|upperFirstLetter }}Getter = true
+        invoked{{ variable.name|upperFirstLetter }}GetterCount += 1
+        return stubbed{{ variable.name|upperFirstLetter }}
+    }
+    {% else %}
+    var {{ variable.name }}: {{ variable.typeName.name }} {
+        set {
+            invoked{{ variable.name|upperFirstLetter }}Setter = true
+            invoked{{ variable.name|upperFirstLetter }}SetterCount += 1
+            invoked{{ variable.name|upperFirstLetter }} = newValue
+            invoked{{ variable.name|upperFirstLetter }}List.append(newValue)
+        }
+        get {
+            invoked{{ variable.name|upperFirstLetter }}Getter = true
+            invoked{{ variable.name|upperFirstLetter }}GetterCount += 1
+            return stubbed{{ variable.name|upperFirstLetter }}
+        }
+    }
+    {% endif %}
+{% endmacro %}
+
+{# 予約後をエスケープするマクロ #}
+{% macro checkReservedWord name %}{% if name == "for" %}`{{ name }}`{% else %}{{ name }}{% endif %}{% endmacro %}
+
+{# ImplicitlyUnwrappedOptionalにする #}
+{% macro makeImplicitlyUnwrappedOptional returnTypeName %}{% if returnTypeName.isImplicitlyUnwrappedOptional %}{{ returnTypeName.name }}{% else %}{{ returnTypeName.unwrappedTypeName }}!{% endif %}{% endmacro %}
+
+{# single value の tupple はコンパイルエラーになるため #}
+{% macro varInvokedParametersReturnValueOne method %}({% for parameter in method.parameters %}{{ parameter.name}}: {{ parameter.typeName }}{% endfor %}, Void){% endmacro %}
+{% macro varInvokedParametersReturnValueOthers method %}{% map method.parameters into result using item %}{{item.name}}: {{item.typeName}}{% endmap %}({{ result|join:", " }}){% endmacro %}
+{% macro varInvokedParametersReturnValue method %}{% if method.parameters.count == 1 %}{% call varInvokedParametersReturnValueOne method %}{% else %}{% call varInvokedParametersReturnValueOthers method %}{% endif %}{% endmacro %}
+
+{% macro funcInvokedParametersReturnValueOne method %}({% for parameter in method.parameters %}{% call checkReservedWord parameter.name %}{% endfor %}, ()){% endmacro %}
+{% macro funcInvokedParametersReturnValueOthers method %}{% map method.parameters into result using item %}{% call checkReservedWord item.name %}{% endmap %}({{ result|join:", " }}){% endmacro %}
+{% macro funcInvokedParametersReturnValue method %}{% if method.parameters.count == 1 %}{% call funcInvokedParametersReturnValueOne method %}{% else %}{% call funcInvokedParametersReturnValueOthers method %}{% endif %}{% endmacro %}
+
+{% macro generateMethods method %}
+    var invoked{{ method.shortName|upperFirstLetter }} = false
+    var invoked{{ method.shortName|upperFirstLetter }}Count = 0
+    {# -----引数あり----- #}
+    {% if method.parameters.count > 0 %}
+    var invoked{{ method.shortName|upperFirstLetter }}Parameters: {% call varInvokedParametersReturnValue method %}?
+    var invoked{{ method.shortName|upperFirstLetter }}ParametersList = [{% call varInvokedParametersReturnValue method %}]()
+    {% endif %}
+    {# -----戻り値あり----- #}
+    {% if method.returnTypeName.name != "Void" %}
+    var stubbed{{ method.shortName|upperFirstLetter }}Result: {% call makeImplicitlyUnwrappedOptional method.returnTypeName %}
+    {% endif %}
+    func {{ method.name }} -> {{ method.returnTypeName.name }} {
+        invoked{{ method.shortName|upperFirstLetter }} = true
+        invoked{{ method.shortName|upperFirstLetter }}Count += 1
+    {# -----引数あり----- #}
+    {% if method.parameters.count > 0 %}
+        invoked{{ method.shortName|upperFirstLetter }}Parameters = {% call funcInvokedParametersReturnValue method %}
+        invoked{{ method.shortName|upperFirstLetter }}ParametersList.append({% call funcInvokedParametersReturnValue method %})
+    {% endif %}
+    {# -----戻り値あり----- #}
+    {% if method.returnTypeName.name != "Void" %}
+        return stubbed{{ method.shortName|upperFirstLetter }}Result
+    {% endif %}
+    }
+{% endmacro %}
+
+{% macro baseMock protocol %}
+    {# -----変数----- #}
+    {% for variable in protocol.allVariables %}
+        {% call generateVariables variable %}
+    {% endfor %}
+    {# -----メソッド----- #}
+    {% for method in protocol.allMethods %}
+        {% call generateMethods method %}
+    {% endfor %}
+{% endmacro %}
+
+{% for protocol in types.protocols %}
+class Mocked{{ protocol.name }}: {{ protocol.name }} {
+    {% call baseMock protocol %}
+}
+{% endfor %}
