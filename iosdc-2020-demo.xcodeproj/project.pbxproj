@@ -457,11 +457,12 @@
 			buildConfigurationList = D65529B724E92C9F0027CF5F /* Build configuration list for PBXNativeTarget "iosdc-2020-demo" */;
 			buildPhases = (
 				C862E52626D5D08FF8A35EF2 /* [CP] Check Pods Manifest.lock */,
+				D652678624F4EF9600B8B27C /* ShellScript */,
+				D652671724EC1C4E00B8B27C /* ShellScript */,
+				D652676924F4EA4600B8B27C /* ShellScript */,
 				D655298924E92C920027CF5F /* Sources */,
 				D655298A24E92C920027CF5F /* Frameworks */,
 				D655298B24E92C920027CF5F /* Resources */,
-				D652671724EC1C4E00B8B27C /* ShellScript */,
-				D652676924F4EA4600B8B27C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -663,6 +664,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "Pods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Domain/Repository --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Domain/Repository/repositoryMock.generated.swift   \nPods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Data/DataSource/Local --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Data/DataSource/Local/localDataSource.generated.swift\nPods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Data/DataSource/Remote --templates templates/mock.stencil --output iosdc-2020-demoTests/generated/Data/DataSource/Remote/remoteDataSource.generated.swift\n";
+		};
+		D652678624F4EF9600B8B27C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "Pods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Data/DataSource --templates templates/dataSource.stencil --output iosdc-2020-demo/generated\nPods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Data/Repository --templates templates/repository.stencil --output iosdc-2020-demo/generated\n\n";
 		};
 		E5C3B5CDD1C27477FD6C8741 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
