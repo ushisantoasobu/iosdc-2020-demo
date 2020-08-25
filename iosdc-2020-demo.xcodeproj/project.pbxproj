@@ -13,6 +13,9 @@
 		D652671624EACBFA00B8B27C /* testData.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652671524EACBFA00B8B27C /* testData.generated.swift */; };
 		D652671B24EC204900B8B27C /* dataSource.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652671924EC204900B8B27C /* dataSource.generated.swift */; };
 		D652671C24EC204900B8B27C /* repository.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652671A24EC204900B8B27C /* repository.generated.swift */; };
+		D652676424F4B34000B8B27C /* repository.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676124F4B34000B8B27C /* repository.stencil */; };
+		D652676524F4B34000B8B27C /* dataSource.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676224F4B34000B8B27C /* dataSource.stencil */; };
+		D652676624F4B34000B8B27C /* testData.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676324F4B34000B8B27C /* testData.stencil */; };
 		D655299124E92C920027CF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299024E92C920027CF5F /* AppDelegate.swift */; };
 		D655299324E92C920027CF5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299224E92C920027CF5F /* SceneDelegate.swift */; };
 		D655299524E92C920027CF5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299424E92C920027CF5F /* ViewController.swift */; };
@@ -68,6 +71,9 @@
 		D652671524EACBFA00B8B27C /* testData.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testData.generated.swift; sourceTree = "<group>"; };
 		D652671924EC204900B8B27C /* dataSource.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataSource.generated.swift; sourceTree = "<group>"; };
 		D652671A24EC204900B8B27C /* repository.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = repository.generated.swift; sourceTree = "<group>"; };
+		D652676124F4B34000B8B27C /* repository.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = repository.stencil; sourceTree = "<group>"; };
+		D652676224F4B34000B8B27C /* dataSource.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataSource.stencil; sourceTree = "<group>"; };
+		D652676324F4B34000B8B27C /* testData.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testData.stencil; sourceTree = "<group>"; };
 		D655298D24E92C920027CF5F /* iosdc-2020-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosdc-2020-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D655299024E92C920027CF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D655299224E92C920027CF5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,15 +175,26 @@
 			path = generated;
 			sourceTree = "<group>";
 		};
+		D652676024F4B34000B8B27C /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				D652676124F4B34000B8B27C /* repository.stencil */,
+				D652676224F4B34000B8B27C /* dataSource.stencil */,
+				D652676324F4B34000B8B27C /* testData.stencil */,
+			);
+			path = templates;
+			sourceTree = "<group>";
+		};
 		D655298424E92C920027CF5F = {
 			isa = PBXGroup;
 			children = (
+				C4AB5429F3BA6A9ED18FE9AF /* Frameworks */,
 				D655298F24E92C920027CF5F /* iosdc-2020-demo */,
 				D65529A624E92C9F0027CF5F /* iosdc-2020-demoTests */,
 				D65529B124E92C9F0027CF5F /* iosdc-2020-demoUITests */,
-				D655298E24E92C920027CF5F /* Products */,
 				A9932369670896873B8F6A1B /* Pods */,
-				C4AB5429F3BA6A9ED18FE9AF /* Frameworks */,
+				D655298E24E92C920027CF5F /* Products */,
+				D652676024F4B34000B8B27C /* templates */,
 			);
 			sourceTree = "<group>";
 		};
@@ -481,6 +498,9 @@
 				D655299A24E92C9F0027CF5F /* Assets.xcassets in Resources */,
 				D655299824E92C920027CF5F /* Main.storyboard in Resources */,
 				D65529E424E967FB0027CF5F /* SomeViewController.storyboard in Resources */,
+				D652676424F4B34000B8B27C /* repository.stencil in Resources */,
+				D652676524F4B34000B8B27C /* dataSource.stencil in Resources */,
+				D652676624F4B34000B8B27C /* testData.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
