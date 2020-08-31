@@ -28,7 +28,7 @@ class SomePresenterTests: XCTestCase {
 
     func testViewDidLoad() throws {
         repository.stubbedFetchResult = [
-            SomeEntity.testData(id: 999)
+            SomeEntity.stub(id: 999)
         ]
         presenter.viewDidLoad()
         XCTAssertEqual(view.invokedFetchedParameters!.someEntities.count, 1)

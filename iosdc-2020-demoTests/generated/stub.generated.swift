@@ -6,7 +6,7 @@ import Foundation
 
 
 extension HogeEntity {
-  static func testData(
+  static func stub(
       id: Int = 0,
       num: Int = 0
   ) -> HogeEntity {
@@ -15,14 +15,14 @@ extension HogeEntity {
           num: num
       )
   }
-}   
+}
 extension SomeEntity {
-  static func testData(
+  static func stub(
       id: Int = 0,
       name: String = "",
       type: SomeType = .hoge,
       complicatedType: SomeTypeWithAssociatedValue = .hoge(name: ""),
-      hoge: HogeEntity = HogeEntity.testData(),
+      hoge: HogeEntity = HogeEntity.stub(),
       imageUrl: String? = nil,
       createdAt: Date = Date()
   ) -> SomeEntity {
@@ -36,5 +36,4 @@ extension SomeEntity {
           createdAt: createdAt
       )
   }
-}   
-
+}

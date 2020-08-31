@@ -10,17 +10,16 @@
 		3153434CC68652315CD1783D /* Pods_iosdc_2020_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1CE123E70F6A077DB85A3A /* Pods_iosdc_2020_demo.framework */; };
 		913063894176D03ED32DB85A /* Pods_iosdc_2020_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E5C5598EAB17CA9046037F /* Pods_iosdc_2020_demoUITests.framework */; };
 		9F3AAD54EE516B615876B6D5 /* Pods_iosdc_2020_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6279337C0AE27E48C049D0DF /* Pods_iosdc_2020_demoTests.framework */; };
-		D652671624EACBFA00B8B27C /* testData.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652671524EACBFA00B8B27C /* testData.generated.swift */; };
 		D652671B24EC204900B8B27C /* dataSource.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652671924EC204900B8B27C /* dataSource.generated.swift */; };
 		D652671C24EC204900B8B27C /* repository.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652671A24EC204900B8B27C /* repository.generated.swift */; };
 		D652676424F4B34000B8B27C /* repository.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676124F4B34000B8B27C /* repository.stencil */; };
 		D652676524F4B34000B8B27C /* dataSource.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676224F4B34000B8B27C /* dataSource.stencil */; };
-		D652676624F4B34000B8B27C /* testData.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676324F4B34000B8B27C /* testData.stencil */; };
 		D652676824F4E7AA00B8B27C /* mock.stencil in Resources */ = {isa = PBXBuildFile; fileRef = D652676724F4E7AA00B8B27C /* mock.stencil */; };
 		D652678124F4EC2500B8B27C /* repositoryMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652677A24F4EC2500B8B27C /* repositoryMock.generated.swift */; };
 		D652678224F4EC2500B8B27C /* localDataSource.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652677E24F4EC2500B8B27C /* localDataSource.generated.swift */; };
 		D652678324F4EC2500B8B27C /* remoteDataSource.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652678024F4EC2500B8B27C /* remoteDataSource.generated.swift */; };
 		D652678524F4ECEE00B8B27C /* SomeRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652678424F4ECEE00B8B27C /* SomeRepositoryTests.swift */; };
+		D652678824FD388400B8B27C /* stub.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652678724FD388400B8B27C /* stub.generated.swift */; };
 		D655299124E92C920027CF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299024E92C920027CF5F /* AppDelegate.swift */; };
 		D655299324E92C920027CF5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299224E92C920027CF5F /* SceneDelegate.swift */; };
 		D655299524E92C920027CF5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655299424E92C920027CF5F /* ViewController.swift */; };
@@ -73,7 +72,6 @@
 		7D9247A7B5611853B208E928 /* Pods-iosdc-2020-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosdc-2020-demo.debug.xcconfig"; path = "Target Support Files/Pods-iosdc-2020-demo/Pods-iosdc-2020-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		B5532BD7E64115030A20B666 /* Pods-iosdc-2020-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosdc-2020-demoTests.debug.xcconfig"; path = "Target Support Files/Pods-iosdc-2020-demoTests/Pods-iosdc-2020-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D485E88DE398D3A8D9A2D74A /* Pods-iosdc-2020-demoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosdc-2020-demoUITests.release.xcconfig"; path = "Target Support Files/Pods-iosdc-2020-demoUITests/Pods-iosdc-2020-demoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D652671524EACBFA00B8B27C /* testData.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testData.generated.swift; sourceTree = "<group>"; };
 		D652671924EC204900B8B27C /* dataSource.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataSource.generated.swift; sourceTree = "<group>"; };
 		D652671A24EC204900B8B27C /* repository.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = repository.generated.swift; sourceTree = "<group>"; };
 		D652676124F4B34000B8B27C /* repository.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = repository.stencil; sourceTree = "<group>"; };
@@ -84,6 +82,7 @@
 		D652677E24F4EC2500B8B27C /* localDataSource.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localDataSource.generated.swift; sourceTree = "<group>"; };
 		D652678024F4EC2500B8B27C /* remoteDataSource.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = remoteDataSource.generated.swift; sourceTree = "<group>"; };
 		D652678424F4ECEE00B8B27C /* SomeRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeRepositoryTests.swift; sourceTree = "<group>"; };
+		D652678724FD388400B8B27C /* stub.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stub.generated.swift; sourceTree = "<group>"; };
 		D655298D24E92C920027CF5F /* iosdc-2020-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosdc-2020-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D655299024E92C920027CF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D655299224E92C920027CF5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,7 +172,7 @@
 			children = (
 				D652677B24F4EC2500B8B27C /* Data */,
 				D652677824F4EC2500B8B27C /* Domain */,
-				D652671524EACBFA00B8B27C /* testData.generated.swift */,
+				D652678724FD388400B8B27C /* stub.generated.swift */,
 			);
 			path = generated;
 			sourceTree = "<group>";
@@ -566,7 +565,6 @@
 				D652676424F4B34000B8B27C /* repository.stencil in Resources */,
 				D652676524F4B34000B8B27C /* dataSource.stencil in Resources */,
 				D652676824F4E7AA00B8B27C /* mock.stencil in Resources */,
-				D652676624F4B34000B8B27C /* testData.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,7 +644,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "Pods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Domain/Entity --templates templates/testData.stencil --output iosdc-2020-demoTests/generated\n";
+			shellScript = "Pods/Sourcery/bin/sourcery --sources iosdc-2020-demo/Domain/Entity --templates templates/stub.stencil --output iosdc-2020-demoTests/generated\n";
 		};
 		D652676924F4EA4600B8B27C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -740,9 +738,9 @@
 			files = (
 				D652678124F4EC2500B8B27C /* repositoryMock.generated.swift in Sources */,
 				D652678224F4EC2500B8B27C /* localDataSource.generated.swift in Sources */,
-				D652671624EACBFA00B8B27C /* testData.generated.swift in Sources */,
 				D652678524F4ECEE00B8B27C /* SomeRepositoryTests.swift in Sources */,
 				D652678324F4EC2500B8B27C /* remoteDataSource.generated.swift in Sources */,
+				D652678824FD388400B8B27C /* stub.generated.swift in Sources */,
 				D65529E624E96A430027CF5F /* SomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

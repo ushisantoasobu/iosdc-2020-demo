@@ -5,7 +5,7 @@ import Foundation
 
 {% for struct in types.structs %}
 extension {{ struct.name }} {
-  static func testData(
+  static func stub(
       {% for variable in struct.allVariables %}
       {# ----- オプショナル ----- #}
       {% if variable.typeName.isOptional %}{{ variable.name }}: {{ variable.typeName }} = nil{% if not forloop.last %},{% endif %}
@@ -27,7 +27,7 @@ extension {{ struct.name }} {
       {# ----- 難しいものは最悪「直書き」する ----- #}
       {% elif variable.typeName.name == "SomeTypeWithAssociatedValue" %}{{ variable.name }}: {{ variable.typeName }} = .hoge(name: ""){% if not forloop.last %},{% endif %}
       {# ----- それ以外は他のEntityなはずなので入れ子とする ----- #}
-      {% else %}{{ variable.name }}: {{ variable.typeName }} = {{ variable.typeName }}.testData(){% if not forloop.last %},{% endif %}
+      {% else %}{{ variable.name }}: {{ variable.typeName }} = {{ variable.typeName }}.stub(){% if not forloop.last %},{% endif %}
       {% endif %}
       {% endfor %}
   ) -> {{ struct.name }} {
@@ -37,6 +37,5 @@ extension {{ struct.name }} {
           {% endfor %}
       )
   }
-}   
+}
 {% endfor %}
-

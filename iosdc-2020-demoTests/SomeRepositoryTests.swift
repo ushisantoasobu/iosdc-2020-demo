@@ -27,7 +27,7 @@ class SomeRepositoryTests: XCTestCase {
 
     func testFetch_when_local_is_empty() throws {
         localDataSource.stubbedFetchResult = []
-        remoteDataSource.stubbedFetchResult = [SomeEntity.testData(id: 11111)]
+        remoteDataSource.stubbedFetchResult = [SomeEntity.stub(id: 11111)]
 
         repository = SomeRepositoryImpl(localDataSource: localDataSource,
                                         remoteDataSource: remoteDataSource)
@@ -40,7 +40,7 @@ class SomeRepositoryTests: XCTestCase {
     }
 
     func testFetch_when_local_is_Not_empty() throws {
-        localDataSource.stubbedFetchResult = [SomeEntity.testData(id: 22222)]
+        localDataSource.stubbedFetchResult = [SomeEntity.stub(id: 22222)]
 
         repository = SomeRepositoryImpl(localDataSource: localDataSource,
                                         remoteDataSource: remoteDataSource)
