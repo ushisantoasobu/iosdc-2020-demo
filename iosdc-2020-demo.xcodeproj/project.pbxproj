@@ -76,7 +76,7 @@
 		D652671A24EC204900B8B27C /* repository.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = repository.generated.swift; sourceTree = "<group>"; };
 		D652676124F4B34000B8B27C /* repository.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = repository.stencil; sourceTree = "<group>"; };
 		D652676224F4B34000B8B27C /* dataSource.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataSource.stencil; sourceTree = "<group>"; };
-		D652676324F4B34000B8B27C /* testData.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testData.stencil; sourceTree = "<group>"; };
+		D652676324F4B34000B8B27C /* stub.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stub.stencil; sourceTree = "<group>"; };
 		D652676724F4E7AA00B8B27C /* mock.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mock.stencil; sourceTree = "<group>"; };
 		D652677A24F4EC2500B8B27C /* repositoryMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = repositoryMock.generated.swift; sourceTree = "<group>"; };
 		D652677E24F4EC2500B8B27C /* localDataSource.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localDataSource.generated.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 				D652676224F4B34000B8B27C /* dataSource.stencil */,
 				D652676724F4E7AA00B8B27C /* mock.stencil */,
 				D652676124F4B34000B8B27C /* repository.stencil */,
-				D652676324F4B34000B8B27C /* testData.stencil */,
+				D652676324F4B34000B8B27C /* stub.stencil */,
 			);
 			path = templates;
 			sourceTree = "<group>";

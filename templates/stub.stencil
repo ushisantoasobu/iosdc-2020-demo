@@ -39,3 +39,4 @@ extension {{ struct.name }} {
   }
 }
 {% endfor %}
+
